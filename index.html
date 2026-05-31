@@ -1811,16 +1811,15 @@
 <!-- ============= HEADER ============= -->
 <header class="bl-header" id="bl-header">
   <div class="bl-header__inner">
-    <a href="/" class="bl-header__logo" aria-label="Brows & Lips home">
-      <img src="./assets/BROWSLIPS_logo_web_brown-350x100-1-300x86.webp" alt="Brows &amp; Lips" width="300" height="86" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span class="bl-logo-text" style="display:none">BROWS <em>&amp;</em> LIPS</span>
+    <a href="/" class="bl-header__logo" aria-label="Brows &amp; Lips home">
+      <span class="bl-logo-text">BROWS <em>&amp;</em> LIPS</span>
     </a>
 
     <nav class="bl-nav" aria-label="Primary">
-      <a href="#services" class="bl-nav__link">Services</a>
-      <a href="#gallery" class="bl-nav__link">Gallery</a>
-      <a href="#testimonials" class="bl-nav__link">Reviews</a>
-      <a href="#booking" class="bl-nav__link">Contact</a>
+      <a href="#curriculum" class="bl-nav__link">Curriculum</a>
+      <a href="#included" class="bl-nav__link">What's Included</a>
+      <a href="#faq" class="bl-nav__link">FAQ</a>
+      <a href="#register" class="bl-nav__link">Register</a>
     </nav>
 
     <div class="bl-header__cta">
@@ -1842,10 +1841,10 @@
   <button class="bl-mobile-close" id="bl-mobile-close" aria-label="Close menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
   </button>
-  <a href="#services" class="bl-nav__link">Services</a>
-  <a href="#gallery" class="bl-nav__link">Gallery</a>
-  <a href="#testimonials" class="bl-nav__link">Reviews</a>
-  <a href="#booking" class="bl-nav__link">Contact</a>
+  <a href="#curriculum" class="bl-nav__link">Curriculum</a>
+  <a href="#included" class="bl-nav__link">What's Included</a>
+  <a href="#faq" class="bl-nav__link">FAQ</a>
+  <a href="#register" class="bl-nav__link">Register</a>
 </nav>
 
 
@@ -2142,7 +2141,7 @@
   <!-- ============================================================ -->
   <!-- CTA — Start Your Journey                                    -->
   <!-- ============================================================ -->
-  <div class="bl-cta-final" data-reveal>
+  <div class="bl-cta-final" id="register" data-reveal>
     <div class="bl-cta-bg">
       <div class="bl-img" data-label="start your journey"><img src="https://browsandlips.ae/assets/courses/lip-blush-hero.webp" alt="" /></div>
     </div>
@@ -2474,6 +2473,26 @@
 <noscript>
   <img height="1" width="1" style="display:none" src="https://www.googletagmanager.com/ns.html?id=G-T1ZQVS908F" alt="">
 </noscript>
+
+<script>
+  // FAQ accordion toggle
+  (function(){
+    var items = document.querySelectorAll('.bl-faq-q');
+    for (var i = 0; i < items.length; i++) {
+      items[i].addEventListener('click', function(){
+        var parent = this.parentElement;
+        var isOpen = parent.classList.contains('is-open');
+        var all = document.querySelectorAll('.bl-faq-item');
+        for (var j = 0; j < all.length; j++) {
+          all[j].classList.remove('is-open');
+        }
+        if (!isOpen) {
+          parent.classList.add('is-open');
+        }
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
