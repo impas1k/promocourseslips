@@ -110,6 +110,18 @@
             }
           } catch(e) {}
         }
+        // Yandex.Metrica reachGoal
+        try {
+          if (typeof ym !== 'undefined') {
+            if (ga4Name.indexOf('whatsapp') !== -1 || ga4Name === 'whatsapp_click') {
+              ym(109551854, 'reachGoal', 'whatsapp_click');
+            } else if (ga4Name.indexOf('phone') !== -1 || ga4Name.indexOf('call') !== -1) {
+              ym(109551854, 'reachGoal', 'phone_click');
+            } else if (ga4Name === 'book_click' || ga4Name === 'form_submit') {
+              ym(109551854, 'reachGoal', 'book_click');
+            }
+          }
+        } catch(e) {}
       }
 
       document.addEventListener('DOMContentLoaded', function() {
