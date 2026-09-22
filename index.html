@@ -104,9 +104,9 @@
           try {
             if (typeof fbq !== 'undefined') {
               if (ga4Name.indexOf('whatsapp') !== -1) {
-                fbq('trackCustom', 'whatsapp_click', params);
+                trackWhatsAppClick();
               } else if (ga4Name.indexOf('phone') !== -1 || ga4Name.indexOf('call') !== -1) {
-                fbq('trackCustom', 'phone_click', params);
+                trackPhoneClick();
               } else {
                 fbq('trackCustom', ga4Name, params);
               }
@@ -2560,6 +2560,8 @@
   })();
 </script>
 
+
+  <script src="capi-helper.js?v=1"></script>
 </body>
 </html>
 <!-- Preview build 1780031682 -->
