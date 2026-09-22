@@ -21,7 +21,7 @@
   'use strict';
 
   // CAPI endpoint — update if you migrate this
-  const CAPI_ENDPOINT = 'https://capi.browsandlips.ae/events';
+  const CAPI_ENDPOINT = 'https://prayers-stand-handling-technical.trycloudflare.com/events';
 
   // Generate stable event_id (per session per conversion type)
   function getEventId(eventName) {
